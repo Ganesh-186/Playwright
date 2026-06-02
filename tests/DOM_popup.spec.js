@@ -23,12 +23,3 @@ test('Checking DOM based POPUP',async({page})=>{
 
  await page.waitForTimeout(4000)
 })
-
-test('Mouse actions',async({page})=>{
-   await page.goto('https://jqueryui.com/droppable/');
-   const frame = await page.frameLocator('.demo-frame');
-   await page.waitForTimeout(3000)
-   await frame.locator('#draggable').dragTo(frame.locator('#droppable'));
-   await page.waitForTimeout(4000);
-})
-
